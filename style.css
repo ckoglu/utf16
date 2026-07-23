@@ -31,7 +31,7 @@
   --font-size: 16px;
   --line-height: 1.8;
   --maxw: 900px;
-  --toph: 70px;
+  --toph: 80px;
   --p: 2px;
   --p2: calc(var(--p) * 2);
   --p3: calc(var(--p) * 3);
