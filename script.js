@@ -19,7 +19,7 @@
   } catch (e) {}
   function syncThemeIcon() {
     $("themeBtn").innerHTML = root.getAttribute("data-theme") === "dark"
-      ? '<i class="fa fa-sun"></i>' : '<i class="fa fa-moon"></i>';
+      ? '<i class="fa fa-sun-o"></i>' : '<i class="fa fa-moon-o"></i>';
   }
   syncThemeIcon();
   $("themeBtn").addEventListener("click", function () {
