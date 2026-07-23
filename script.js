@@ -33,9 +33,16 @@
   function alertMsg(message, type) {
     var box = document.createElement("div");
     box.className = "alert-box " + (type === "warn" ? "warn" : "copy");
-    box.innerHTML = '<div class="alertContent"><div class="alertIcon"><i class="fa ' +
-      (type === "warn" ? "fa-triangle-exclamation" : "fa-circle-check") +
-      '"></i></div><div class="alertMessage">' + message + "</div></div>";
+    var icon = document.createElement("div");
+    icon.className = "alertIcon";
+    icon.innerHTML = '<i class="fa ' + (type === "warn" ? "fa-triangle-exclamation" : "fa-circle-check") + '"></i>';
+    var msg = document.createElement("div");
+    msg.className = "alertMessage";
+    msg.textContent = message;               // metin olarak basılır, HTML olarak yorumlanmaz
+    var wrap = document.createElement("div");
+    wrap.className = "alertContent";
+    wrap.appendChild(icon); wrap.appendChild(msg);
+    box.appendChild(wrap);
     $("alertBox").appendChild(box);
     requestAnimationFrame(function () { box.classList.add("show"); });
     setTimeout(function () {
@@ -182,7 +189,7 @@
       ? Math.round(((res.text.length - src.length) / src.length) * 100) + "%" : "0%";
     $("statCount").textContent = res.count;
 
-    // biçim seçeneği yön ile uyumsuzsa görsel olarak sönükleştir
+    // biçim ve kapsam yalnız kodlama yönünde anlamlı
     fmtSel.disabled = !isEnc;
     scopeSel.disabled = !isEnc;
     fmtSel.style.opacity = scopeSel.style.opacity = isEnc ? "1" : ".5";
