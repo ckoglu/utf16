@@ -212,5 +212,5 @@ textarea[readonly]{background:var(--silver)}
 .swap-row{display:flex; justify-content:center; gap:var(--p3); flex-wrap:wrap}
 .swap-row button{background:var(--white)}
 .swap-row button:hover{background:var(--silver); border-color:var(--blue); color:var(--blue)}
-footer{padding:var(--p8) var(--p14) var(--p16); color:var(--text-sec-clr); font-size:calc(var(--font-size) - 5px); font-family:var(--font-mono); text-align:center; width:100%; max-width:var(--maxw);}
+footer{border: 1px solid var(--black-25);border-top: 0;padding:var(--p8) var(--p16); color:var(--text-sec-clr); font-size:calc(var(--font-size) - 5px); font-family:var(--font-mono); text-align:center; width:100%; max-width:var(--maxw);}
 @media (prefers-reduced-motion: reduce){*{transition:none!important; animation:none!important}}
