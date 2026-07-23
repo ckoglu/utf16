@@ -260,12 +260,6 @@
     alertMsg("Sonuç girişe taşındı, yön değişti");
   });
 
-  $("sampleBtn").addEventListener("click", function () {
-    dirSel.value = "enc";
-    input.value = 'const mesaj = "Şeftali ağacı ışıldıyor: İĞÜÖÇŞ / iğüöçş";';
-    run();
-  });
-
   document.addEventListener("keydown", function (e) {
     if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "C" || e.key === "c")) {
       e.preventDefault();
