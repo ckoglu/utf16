@@ -2,25 +2,11 @@
 
 Türkçe karakterleri ve diğer ASCII dışı işaretleri kaçış dizisine (escape sequence) çeviren, tek dosyalık bir tarayıcı aracı. Yazdıkça ve yapıştırdıkça anında dönüşür, ters yönde kod çözme de yapar. Sunucu yok, bağımlılık yok, metin cihazdan çıkmaz.
 
-## 🚀 Temel Kullanım
 
-`unicode-escape.html` dosyasını çift tıklayıp tarayıcıda açın. Sol alana yazın veya yapıştırın, sonuç sağ alanda anında oluşur.
+## 🚀 Temel Kullanım
 
 Sağ üstteki 📋 düğmesi ya da <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> sonucu panoya kopyalar.
 
-## ⚙️ Kurulum
-
-Kurulum gerektirmez. Dosyayı indirip açmanız yeterlidir.
-
-### Siteye gömmek isterseniz
-Dosyayı olduğu gibi sunucunuza koyabilir veya `<iframe>` ile çağırabilirsiniz:
-
-```html
-<iframe src="unicode-escape.html" style="width:100%;height:900px;border:0"></iframe>
-```
-
-### Çevrimdışı kullanım
-İkonlar Font Awesome CDN'inden gelir. Tamamen çevrimdışı çalışması için `<head>` içindeki CDN bağlantısını yerel bir kopyayla değiştirin; araç, ikonlar yüklenmese de çalışmaya devam eder.
 
 ## 📚 Karakter Referansı
 
@@ -165,9 +151,6 @@ Her iki panelin altında canlı sayaçlar bulunur.
 | <kbd>Tab</kbd> | Giriş alanına sekme karakteri ekler (odak sıçramaz) |
 | <kbd>Enter</kbd> / <kbd>Boşluk</kbd> | Odaklanmış harita kartındaki kodu kopyalar |
 
-## 🎨 Tema
-
-Sağ üstteki düğme açık ve koyu tema arasında geçiş yapar. Seçim `localStorage` içinde saklanır; ilk açılışta kayıt yoksa işletim sistemi tercihi kullanılır. `prefers-reduced-motion` açık olan sistemlerde geçiş animasyonları kapanır.
 
 ## 🧩 Teknik Notlar
 
