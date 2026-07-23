@@ -93,7 +93,7 @@ body{display:flex; flex-direction: column; align-items: center; font-family: var
 /* ── HEADER ── */
 header{display:flex; justify-content: space-between; align-items: center; position: fixed; top: 0; z-index: 999; background: transparent; width: 100%; max-width: var(--maxw); border: 1px solid var(--black-25); border-top: 0;}
 header::before{content:""; position: absolute; inset: 0; backdrop-filter: var(--blur); pointer-events: none; z-index: -1;}
-.border-top{display:flex; justify-content: space-between; align-items: center; width: 100%; border-top: 6px solid; border-image: linear-gradient(139deg, #9875ff, #8a73ff, #3b82f6, #06b6d4) 3; padding: var(--p6) var(--p14);}
+.border-top{display:flex; justify-content: space-between; align-items: center; width: 100%; border-top: 8px solid; border-image: linear-gradient(139deg, #9875ff, #8a73ff, #3b82f6, #06b6d4) 3; padding: var(--p9) var(--p16);}
 .main-title h1{font-size:calc(var(--font-size) + 2px); font-weight: 700; color: var(--text-clr); line-height: 1.3;}
 .main-title h1 i {color:var(--blue)}
 .main-title p{color:var(--text-sec-clr); font-family: var(--font-mono); font-size: calc(var(--font-size) - 3px); letter-spacing: -0.4px; line-height: 1.4;}
@@ -107,7 +107,7 @@ button:hover{background:var(--light-gray)}
 /* ── SEARCH BAR (sticky) ── */
 .section-title-container{display:flex; align-items: center; flex-direction: column; position: sticky; top: var(--toph); z-index: 998; background: transparent; border-bottom: 1px solid var(--black-25); border-top: 0; max-width: var(--maxw); width: 100%;}
 .section-title-container::before{content:""; position: absolute; inset: 0; backdrop-filter: var(--blur); pointer-events: none; z-index: -1;}
-.section-title-top{display:flex; align-items: center; justify-content: space-between; width: 100%; padding: var(--p6) var(--p14);}
+.section-title-top{display:flex; align-items: center; justify-content: space-between; width: 100%; padding: var(--p6) var(--p16);}
 .section-title{font-size:calc(var(--font-size) + 1px); font-weight: 600; color: var(--text-clr); display: flex; align-items: center; gap: var(--p2);}
 .section-buttons{display:flex; align-items: center; gap: var(--p2);width: 100%;}
 /* search input */
@@ -165,7 +165,7 @@ main{width:100%; padding-top: var(--toph); max-width: var(--maxw); min-height: 1
 .data-btn:hover{color:var(--text-clr); background: var(--silver)}
 
 /* ══════════ ARAÇ İÇİN EK STİLLER ══════════ */
-.doc-section{padding:var(--p10) var(--p14); border-top:1px solid var(--black-25);}
+.doc-section{padding:var(--p14) var(--p16); border-top:1px solid var(--black-25);}
 .doc-section p{color:var(--text-sec-clr); font-size:calc(var(--font-size) - 2px);}
 .doc-section p + p{margin-top:var(--p3)}
 .doc-section code{font-family:var(--font-mono); background:var(--silver); border:1px solid var(--black-25); border-radius:var(--p2); padding:0 var(--p2); color:var(--blue); font-size:calc(var(--font-size) - 3px);}
@@ -185,7 +185,7 @@ main{width:100%; padding-top: var(--toph); max-width: var(--maxw); min-height: 1
 .map-card.copied{background:var(--green-bg)!important; border-color:var(--green)!important; animation:pop var(--transition) ease;}
 .map-card.copied .ch,.map-card.copied .esc{color:var(--green-text)!important}
 /* dönüştürücü */
-.tool-section{padding:var(--p10) var(--p14); display:flex; flex-direction:column; gap:var(--p6);}
+.tool-section{padding:var(--p14) var(--p16); display:flex; flex-direction:column; gap:var(--p6);}
 .options-row{display:flex; flex-wrap:wrap; gap:var(--p4); align-items:flex-end;}
 .field{display:flex; flex-direction:column; gap:var(--p);}
 .field label{font-size:calc(var(--font-size) - 5px); text-transform:uppercase; letter-spacing:1px; color:var(--text-sec-clr); font-weight:600;}
