@@ -200,7 +200,7 @@ select:disabled{cursor:not-allowed}
 .pane-head{display:flex; align-items:center; justify-content:space-between; gap:var(--p3);}
 .pane-head .section-title{font-size:calc(var(--font-size) - 2px)}
 .ta-wrap{position:relative}
-textarea{width:100%; min-height:260px; resize:vertical; padding:var(--p6) var(--p6) var(--p6); padding-right:var(--p20); border:1px solid var(--black-25); border-radius:var(--p3); background:var(--white); color:var(--text-clr); font-family:var(--font-mono); font-size:calc(var(--font-size) - 2px); line-height:1.7; transition:all var(--transition); white-space:pre; overflow-wrap:normal; overflow-x:auto;}
+textarea{width:100%; min-height:260px; resize:vertical; padding:var(--p6) var(--p6) var(--p6); padding-right:var(--p20); border:1px solid var(--black-25); border-radius:var(--p3); background:var(--white); color:var(--text-clr); font-family:var(--font-mono); font-size:calc(var(--font-size) - 2px); line-height:1.7; transition:all var(--transition); white-space:break-spaces; overflow-wrap:normal; overflow-x:auto;}
 textarea:focus{border-color:var(--blue); box-shadow:var(--outline)}
 textarea::placeholder{color:var(--light-gray)}
 textarea[readonly]{background:var(--silver)}
