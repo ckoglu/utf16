@@ -4,11 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Unicode Escape Dönüştürücü — Türkçe Karakterler</title>
+<meta name="description" content="Türkçe karakterleri \uXXXX, CSS, HTML ve URL kaçış dizilerine çevirir; ters yönde kod çözer.">
 <link rel="preload" href="./style.css" as="style">
 <link rel="stylesheet" href="./style.css"/>
 <link rel="stylesheet" href="https://ckoglu.github.io/fawesome/font-awesome.css">
 </head>
 <body>
+
 <header>
   <div class="border-top">
     <div class="main-title">
@@ -26,50 +28,47 @@
     </div>
   </div>
 </header>
+
 <main>
-  <section class="tool-section">
-    <div class="panes">
-      <div class="pane">
-        <div class="pane-head">
-          <div class="section-title"><i class="fa fa-keyboard"></i> <span id="inLabel">Metin</span></div>
+
+  <!-- ── AYARLAR (sticky) ── -->
+  <div class="section-title-container">
+    <div class="section-title-top">
+      <div class="section-title"><i class="fa fa-sliders"></i> Ayarlar</div>
+      <div class="hint-text"><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> sonucu kopyalar</div>
+    </div>
+    <div class="section-title-top" style="padding-top:0">
+      <div class="options-row">
+        <div class="field">
+          <label for="dirSel">Yön</label>
+          <select id="dirSel">
+            <option value="enc">Metin → kaçış kodu</option>
+            <option value="dec">Kaçış kodu → metin</option>
+          </select>
         </div>
-        <div class="ta-wrap">
-          <div class="ta-tools">
-            <button class="data-btn" id="pasteBtn" title="Panodan yapıştır"><i class="fa fa-paste"></i></button>
-            <button class="data-btn" id="clearBtn" title="Temizle"><i class="fa fa-eraser"></i></button>
-          </div>
-          <textarea id="input" spellcheck="false" placeholder="Buraya yazın veya yapıştırın&#10;örn: Şeftali ağacı ışıldıyor"></textarea>
+        <div class="field">
+          <label for="fmtSel">Biçim</label>
+          <select id="fmtSel">
+            <option value="js">\u00FC — JS / JSON / Java</option>
+            <option value="css">\0000FC — CSS</option>
+            <option value="htmlx">&amp;#xFC; — HTML onaltılık</option>
+            <option value="htmld">&amp;#252; — HTML ondalık</option>
+            <option value="pct">%C3%BC — URL / yüzde</option>
+          </select>
         </div>
-        <div class="meta">
-          <span>karakter <b id="inChars">0</b></span>
-          <span>satır <b id="inLines">1</b></span>
-          <span>bayt (UTF-8) <b id="inBytes">0</b></span>
+        <div class="field">
+          <label for="scopeSel">Kapsam</label>
+          <select id="scopeSel">
+            <option value="tr">Yalnızca Türkçe harfler</option>
+            <option value="nonascii">Tüm ASCII dışı karakterler</option>
+            <option value="strict">ASCII dışı + tırnak, \ ve satır sonu</option>
+          </select>
         </div>
-      </div>
-      <div class="pane">
-        <div class="pane-head">
-          <div class="section-title"><i class="fa fa-file-code"></i> <span id="outLabel">Kaçış kodu</span></div>
-        </div>
-        <div class="ta-wrap">
-          <div class="ta-tools">
-            <button class="data-btn" id="copyBtn" title="Sonucu kopyala"><i class="fa fa-copy"></i></button>
-            <button class="data-btn" id="dlBtn" title="Dosya olarak indir"><i class="fa fa-download"></i></button>
-          </div>
-          <textarea id="output" spellcheck="false" readonly placeholder="Sonuç burada görünür"></textarea>
-        </div>
-        <div class="meta">
-          <span>karakter <b id="outChars">0</b></span>
-          <span>dönüştürülen <b id="outConv">0</b></span>
-          <span>uzama <b id="outRatio">0%</b></span>
-        </div>
+        <label class="switch"><input type="checkbox" id="lowerChk"> küçük harf onaltılık</label>
       </div>
     </div>
-    <div class="swap-row">
-      <button id="swapBtn"><i class="fa fa-right-left"></i> Sonucu girişe taşı</button>
-      <button id="sampleBtn"><i class="fa fa-flask"></i> Örnek metin yükle</button>
-    </div>
-  </section>
-  
+  </div>
+
   <!-- ── DÖNÜŞTÜRÜCÜ ── -->
   <section class="tool-section">
     <div class="panes">
@@ -116,44 +115,6 @@
     </div>
   </section>
 
-    <!-- ── STICKY AYARLAR ── -->
-  <div class="section-title-container">
-    <div class="section-title-top">
-      <div class="section-title"><i class="fa fa-sliders"></i> Ayarlar</div>
-      <div class="hint-text"><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> sonucu kopyalar</div>
-    </div>
-    <div class="section-title-top" style="padding-top:0">
-      <div class="options-row">
-        <div class="field">
-          <label for="dirSel">Yön</label>
-          <select id="dirSel">
-            <option value="enc">Metin → kaçış kodu</option>
-            <option value="dec">Kaçış kodu → metin</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="fmtSel">Biçim</label>
-          <select id="fmtSel">
-            <option value="js">\u00FC — JS / JSON / Java</option>
-            <option value="css">\0000FC — CSS</option>
-            <option value="htmlx">&amp;#xFC; — HTML onaltılık</option>
-            <option value="htmld">&amp;#252; — HTML ondalık</option>
-            <option value="pct">%C3%BC — URL / yüzde</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="scopeSel">Kapsam</label>
-          <select id="scopeSel">
-            <option value="tr">Yalnızca Türkçe harfler</option>
-            <option value="nonascii">Tüm ASCII dışı karakterler</option>
-            <option value="strict">ASCII dışı + tırnak, \ ve satır sonu</option>
-          </select>
-        </div>
-        <label class="switch"><input type="checkbox" id="lowerChk"> küçük harf onaltılık</label>
-      </div>
-    </div>
-  </div>
-
   <!-- ── AÇIKLAMA ── -->
   <section class="doc-section">
     <div class="doc-title"><i class="fa fa-circle-info"></i> Bu araç ne yapar?</div>
@@ -175,9 +136,11 @@
     </ul>
     <div class="map-grid" id="mapGrid"></div>
   </section>
+
 </main>
-<footer>Tek dosya, bağımlılıksız. Metin tarayıcıdan dışarı çıkmaz.</footer>
+
+<footer>Sunucu yok, bağımlılık yok. Metin tarayıcıdan dışarı çıkmaz.</footer>
 <div id="alertBox"></div>
-<script src="./script.js"></script>
+<script src="./script.js" defer></script>
 </body>
 </html>
