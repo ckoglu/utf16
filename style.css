@@ -44,8 +44,7 @@
   --p10: calc(var(--p) * 10);
   --p11: calc(var(--p) * 11);
   --p12: calc(var(--p) * 12);
-  --p13: calc(var(--p) * 13);<!-- ── DÖNÜŞTÜRÜCÜ ── -->
-  
+  --p13: calc(var(--p) * 13);
   --p14: calc(var(--p) * 14);
   --p16: calc(var(--p) * 16);
   --p20: calc(var(--p) * 20);
@@ -166,7 +165,7 @@ main{width:100%; padding-top: var(--toph); max-width: var(--maxw); min-height: 1
 .data-btn:hover{color:var(--text-clr); background: var(--silver)}
 
 /* ══════════ ARAÇ İÇİN EK STİLLER ══════════ */
-.doc-section{padding:var(--p10) var(--p14); border-bottom:1px solid var(--black-25);}
+.doc-section{padding:var(--p10) var(--p14); border-top:1px solid var(--black-25);}
 .doc-section p{color:var(--text-sec-clr); font-size:calc(var(--font-size) - 2px);}
 .doc-section p + p{margin-top:var(--p3)}
 .doc-section code{font-family:var(--font-mono); background:var(--silver); border:1px solid var(--black-25); border-radius:var(--p2); padding:0 var(--p2); color:var(--blue); font-size:calc(var(--font-size) - 3px);}
@@ -176,9 +175,10 @@ main{width:100%; padding-top: var(--toph); max-width: var(--maxw); min-height: 1
 .doc-list li{font-size:calc(var(--font-size) - 3px); color:var(--text-sec-clr); display:flex; gap:var(--p4); align-items:flex-start; line-height:1.6;}
 .doc-list li i{color:var(--green); margin-top:6px; font-size:calc(var(--font-size) - 6px)}
 /* harita tablosu */
-.map-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(110px,1fr)); gap:var(--p4); margin-top:var(--p6);}
+.map-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:var(--p4); margin-top:var(--p6);}
 .map-card{background:var(--silver); border:1px solid var(--black-25); border-radius:var(--p5); padding:var(--p6) var(--p4); cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:var(--p2); transition:all var(--transition); user-select:none;}
 .map-card:hover{background:var(--blue-bg); border-color:var(--blue); box-shadow:var(--bs-hover); transform:translateY(-1px);}
+.map-card:focus-visible{border-color:var(--blue); box-shadow:var(--outline)}
 .map-card .ch{font-size:calc(var(--font-size) + 10px); font-weight:700; line-height:1; color:var(--text-clr);}
 .map-card:hover .ch{color:var(--blue)}
 .map-card .esc{font-family:var(--font-mono); font-size:calc(var(--font-size) - 5px); color:var(--text-sec-clr); letter-spacing:-.3px;}
@@ -191,6 +191,7 @@ main{width:100%; padding-top: var(--toph); max-width: var(--maxw); min-height: 1
 .field label{font-size:calc(var(--font-size) - 5px); text-transform:uppercase; letter-spacing:1px; color:var(--text-sec-clr); font-weight:600;}
 select{padding:calc(var(--p2) + 3px) var(--p5); border:1px solid var(--black-25); border-radius:var(--p3); background:var(--white); color:var(--text-clr); font-family:var(--font-sans); font-size:calc(var(--font-size) - 2px); cursor:pointer; transition:all var(--transition);}
 select:focus{border-color:var(--blue); box-shadow:var(--outline)}
+select:disabled{cursor:not-allowed}
 .switch{display:flex; align-items:center; gap:var(--p3); font-size:calc(var(--font-size) - 3px); color:var(--text-sec-clr); cursor:pointer; user-select:none; padding-bottom:4px;}
 .switch input{accent-color:var(--blue); width:16px; height:16px; cursor:pointer}
 .panes{display:grid; grid-template-columns:1fr 1fr; gap:var(--p6); align-items:start;}
