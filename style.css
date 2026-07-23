@@ -175,7 +175,7 @@ main{width:100%; padding-top: var(--toph); max-width: var(--maxw); min-height: 1
 .doc-list li{font-size:calc(var(--font-size) - 3px); color:var(--text-sec-clr); display:flex; gap:var(--p4); align-items:flex-start; line-height:1.6;}
 .doc-list li i{color:var(--green); margin-top:6px; font-size:calc(var(--font-size) - 6px)}
 /* harita tablosu */
-.map-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:var(--p4); margin-top:var(--p6);}
+.map-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); gap:var(--p4); margin-top:var(--p6);}
 .map-card{background:var(--silver); border:1px solid var(--black-25); border-radius:var(--p5); padding:var(--p6) var(--p4); cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:var(--p2); transition:all var(--transition); user-select:none;}
 .map-card:hover{background:var(--blue-bg); border-color:var(--blue); box-shadow:var(--bs-hover); transform:translateY(-1px);}
 .map-card:focus-visible{border-color:var(--blue); box-shadow:var(--outline)}
