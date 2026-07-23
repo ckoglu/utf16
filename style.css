@@ -32,7 +32,7 @@
   --line-height: 1.8;
   --maxw: 900px;
   --toph: 70px;
-  --p: 3px;
+  --p: 2px;
   --p2: calc(var(--p) * 2);
   --p3: calc(var(--p) * 3);
   --p4: calc(var(--p) * 4);
